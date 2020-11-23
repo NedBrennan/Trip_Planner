@@ -11,4 +11,9 @@ const map = new mapboxgl.Map({
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
 
+let marker = document.createElement('div')
+marker.style.width = "32px";
+marker.style.height = "39px";
+marker.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
 
+new mapboxgl.Marker(marker).setLngLat([-74.009, 40.705]).addTo(map);
